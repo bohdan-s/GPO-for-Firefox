@@ -1,0 +1,118 @@
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName>FirefoxADMX</displayName>
+  <description>Firefox ADMX is a way of allowing centrally managed locked and/or default settings in Firefox via Group Policy and Administrative Templates in Active Directory. Firefox ADMX is a continuation of Firefox ADM by Mark Sammons.</description>
+  <resources>
+    <stringTable>
+    <string id="APPLICATIONS">Applications</string>	
+	  <string id="MOZILLA">Mozilla</string>
+      <string id="MOZILLA_FIREFOX_LOCKED">Firefox - Locked (User can not change)</string>
+	  <string id="MOZILLA_FIREFOX_LOCKED_APP_UPDATEAUTO">app.update.auto</string>
+	  <string id="MOZILLA_FIREFOX_LOCKED_APP_UPDATEENABLED">app.update.enabled</string>
+	  <string id="MOZILLA_FIREFOX_LOCKED_BROWSER_BOOKMARKSRESTORE">browser.bookmarks.restore_default_bookmarks</string>
+	  <string id="MOZILLA_FIREFOX_LOCKED_BROWSER_DEFAULTBROWSER">browser.shell.checkDefaultBrowser</string>
+	  <string id="MOZILLA_FIREFOX_LOCKED_BROWSER_DOWNLOADDIR">browser.download.dir</string>
+	  <string id="MOZILLA_FIREFOX_LOCKED_BROWSER_DOWNLOADFOLDERLIST">browser.download.folderList</string>
+	  <string id="MOZILLA_FIREFOX_LOCKED_BROWSER_DOWNLOADUSEDIR">browser.download.useDownloadDir</string>
+	  <string id="MOZILLA_FIREFOX_LOCKED_BROWSER_SEARCHUPDATE">browser.search.update</string>
+	  <string id="MOZILLA_FIREFOX_LOCKED_BROWSER_HOMEPAGE">browser.startup.homepage</string>
+	  <string id="MOZILLA_FIREFOX_LOCKED_EXTENSIONS_UPDATEENABLED">extensions.update.enabled</string>
+	  <string id="MOZILLA_FIREFOX_LOCKED_NETOWRK_COOKIEPERFSMIGRATED">network.cookie.prefsMigrated</string>
+	  <string id="MOZILLA_FIREFOX_LOCKED_NETOWRK_PROXYMANUAL">network.proxy.(protocol)</string>
+	  <string id="MOZILLA_FIREFOX_LOCKED_NETWORK_PROXYVER">network.http.proxy.version</string>
+	  <string id="MOZILLA_FIREFOX_LOCKED_NETOWRK_PROXYAUTOURL">network.proxy.autoconfig_url</string>
+	  <string id="MOZILLA_FIREFOX_LOCKED_NETOWRK_PROXYSHARESETTING">network.proxy.share_proxy_settings</string>
+	  <string id="MOZILLA_FIREFOX_LOCKED_NETOWRK_PROXYTYPE">network.proxy.type</string>
+	  <string id="MOZILLA_FIREFOX_LOCKED_NETWORK_NEGOTIATETRUSTURIS">network.negotiate-auth.trusted-uris</string>
+	  <string id="MOZILLA_FIREFOX_LOCKED_NETWORK_NEGOTIATEDELEGATIONURIS">network.negotiate-auth.delegation-uris</string>
+	  <string id="MOZILLA_FIREFOX_LOCKED_NETWORK_NTLMTRUSTURIS">network.automatic-ntlm-auth.trusted-uris</string>
+    </stringTable>
+    <presentationTable>
+	  <presentation id="MOZILLA_FIREFOX_LOCKED_NETOWRK_PROXYMANUAL_TEXT">
+        <textBox refId="MOZILLA_FIREFOX_LOCKED_NETOWRK_PROXYMANUAL_HTTP_TEXT">
+          <label>HTTP Proxy URL</label>
+          <defaultValue></defaultValue>
+        </textBox>
+        <textBox refId="MOZILLA_FIREFOX_LOCKED_NETOWRK_PROXYMANUAL_HTTP_PORT_TEXT">
+          <label>HTTP Proxy Port</label>
+          <defaultValue></defaultValue>
+        </textBox>
+        <textBox refId="MOZILLA_FIREFOX_LOCKED_NETOWRK_PROXYMANUAL_SSL_TEXT">
+          <label>SSL Proxy URL</label>
+          <defaultValue></defaultValue>
+        </textBox>
+        <textBox refId="MOZILLA_FIREFOX_LOCKED_NETOWRK_PROXYMANUAL_SSL_PORT_TEXT">
+          <label>SSL Proxy Port</label>
+          <defaultValue></defaultValue>
+        </textBox>
+        <textBox refId="MOZILLA_FIREFOX_LOCKED_NETOWRK_PROXYMANUAL_FTP_TEXT">
+          <label>FTP Proxy URL</label>
+          <defaultValue></defaultValue>
+        </textBox>
+        <textBox refId="MOZILLA_FIREFOX_LOCKED_NETOWRK_PROXYMANUAL_FTP_PORT_TEXT">
+          <label>FTP Proxy Port</label>
+          <defaultValue></defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="MOZILLA_FIREFOX_LOCKED_NETOWRK_PROXYAUTOURL_TEXT">
+        <textBox refId="MOZILLA_FIREFOX_LOCKED_NETOWRK_PROXYAUTOURL_TEXT">
+          <label>Auto Proxy URL</label>
+          <defaultValue></defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="MOZILLA_FIREFOX_LOCKED_BROWSER_DOWNLOADDIR_TEXT">
+        <textBox refId="MOZILLA_FIREFOX_LOCKED_BROWSER_DOWNLOADDIR_TEXT">
+          <label>Download Directory</label>
+          <defaultValue></defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="MOZILLA_FIREFOX_LOCKED_BROWSER_DOWNLOADFOLDERLIST_TEXT">
+        <textBox refId="MOZILLA_FIREFOX_LOCKED_BROWSER_DOWNLOADFOLDERLIST_TEXT">
+          <label>Download Folder List</label>
+          <defaultValue></defaultValue>
+        </textBox>
+      </presentation>
+	  <presentation id="MOZILLA_FIREFOX_LOCKED_BROWSER_HOMEPAGE_TEXT">
+        <textBox refId="MOZILLA_FIREFOX_LOCKED_BROWSER_HOMEPAGE_TEXT">
+          <label>Home Page URL</label>
+          <defaultValue></defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="MOZILLA_FIREFOX_LOCKED_NETWORK_PROXYVER_TEXT">
+        <textBox refId="MOZILLA_FIREFOX_LOCKED_NETWORK_PROXYVER_TEXT">
+          <label>HTTP Proxy Version</label>
+          <defaultValue>1.0</defaultValue>
+        </textBox>
+      </presentation>
+	  <presentation id="MOZILLA_FIREFOX_LOCKED_NETOWRK_PROXYTYPE_TEXT">
+        <textBox refId="MOZILLA_FIREFOX_LOCKED_NETOWRK_PROXYTYPE_TEXT">
+          <label>Network Proxy Type. 1 - AutoConfig URL, 2 - Manual Proxy Settings</label>
+          <defaultValue></defaultValue>
+        </textBox>
+      </presentation>
+	  <presentation id="MOZILLA_FIREFOX_LOCKED_NETWORK_NEGOTIATETRUSTURIS_TEXT">
+        <textBox refId="MOZILLA_FIREFOX_LOCKED_NETWORK_NEGOTIATETRUSTURIS_TEXT">
+          <label>Negotiated Trust URL's</label>
+          <defaultValue></defaultValue>
+        </textBox>
+      </presentation>
+	  <presentation id="MOZILLA_FIREFOX_LOCKED_NETWORK_NEGOTIATEDELEGATIONURIS_TEXT">
+        <textBox refId="MOZILLA_FIREFOX_LOCKED_NETWORK_NEGOTIATEDELEGATIONURIS_TEXT">
+          <label>Negotiated Delegation URL's</label>
+          <defaultValue></defaultValue>
+        </textBox>
+      </presentation>
+	  <presentation id="MOZILLA_FIREFOX_LOCKED_NETWORK_NTLMTRUSTURIS_TEXT">
+        <textBox refId="MOZILLA_FIREFOX_LOCKED_NETWORK_NTLMTRUSTURIS_TEXT">
+          <label>NTLM Trust URL's</label>
+          <defaultValue></defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="MOZILLA_FIREFOX_LOCKED_DISABLEUPDATES">
+	          <dropdownList refId="MOZILLA_FIREFOX_LOCKED_CUSTOM_HOMEPAGE_DISPLAY_DROPDOWN" defaultItem="0">Display when Firefox starts</dropdownList>
+        <checkBox refId="MOZILLA_FIREFOX_LOCKED_DISABLEUPDATES_FIREFOX" defaultChecked="true">Disable Firefox Automatic Update</checkBox>
+        <checkBox refId="MOZILLA_FIREFOX_LOCKED_DISABLEUPDATES_EXTENSIONS" defaultChecked="true">Disable Extensions Updates</checkBox>
+        <checkBox refId="MOZILLA_FIREFOX_LOCKED_DISABLEUPDATES_SEARCH" defaultChecked="true">Disable Search Engine Updates</checkBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>
