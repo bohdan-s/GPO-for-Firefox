@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+  <policyNamespaces>
+		<target prefix="MozillaFirefox" namespace="Microsoft.Policies.MozillaFirefox" />
+		<using prefix="windows" namespace="Microsoft.Policies.Windows" />
+	</policyNamespaces>
+	<resources minRequiredRevision="1.0" />
+	<categories>
+		<category name="APPLICATIONS" displayName="$(string.APPLICATIONS)" />
+		<category name="MOZILLA" displayName="$(string.MOZILLA)">
+			<parentCategory ref="APPLICATIONS" />
+		</category>
+		<category name="MOZILLA_FIREFOX_LOCKED" displayName="$(string.MOZILLA_FIREFOX_LOCKED)">
+			<parentCategory ref="MOZILLA" />
+		</category>
+	</categories>
+	<policies>
+		<policy name="MOZILLA_FIREFOX_LOCKED_APP_UPDATEAUTO" class="Machine" displayName="$(string.MOZILLA_FIREFOX_LOCKED_APP_UPDATEAUTO)" key="Software\Policies\Mozilla\Firefox\Locked\" valueName="app.update.auto">
+			<parentCategory ref="MOZILLA_FIREFOX_LOCKED" />
+			<supportedOn ref="windows:SUPPORTED_WINXPSP2" />
+			<enabledValue>
+				<string>true</string>
+			</enabledValue>
+			<disabledValue>
+				<string>false</string>
+			</disabledValue>
+		</policy>		
+		<policy name="MOZILLA_FIREFOX_LOCKED_APP_UPDATEENABLED" class="Machine" displayName="$(string.MOZILLA_FIREFOX_LOCKED_APP_UPDATEENABLED)" key="Software\Policies\Mozilla\Firefox\Locked\" valueName="app.update.enabled">
+			<parentCategory ref="MOZILLA_FIREFOX_LOCKED" />
+			<supportedOn ref="windows:SUPPORTED_WINXPSP2" />
+			<enabledValue>
+				<string>true</string>
+			</enabledValue>
+			<disabledValue>
+				<string>false</string>
+			</disabledValue>
+		</policy>		
+		<policy name="MOZILLA_FIREFOX_LOCKED_BROWSER_BOOKMARKSRESTORE" class="Machine" displayName="$(string.MOZILLA_FIREFOX_LOCKED_BROWSER_BOOKMARKSRESTORE)" key="Software\Policies\Mozilla\Firefox\Locked\" valueName="browser.bookmarks.restore_default_bookmarks">
+			<parentCategory ref="MOZILLA_FIREFOX_LOCKED" />
+			<supportedOn ref="windows:SUPPORTED_WINXPSP2" />
+			<enabledValue>
+				<string>true</string>
+			</enabledValue>
+			<disabledValue>
+				<string>false</string>
+			</disabledValue>
+		</policy>		
+		<policy name="MOZILLA_FIREFOX_LOCKED_BROWSER_DEFAULTBROWSER" class="Machine" displayName="$(string.MOZILLA_FIREFOX_LOCKED_BROWSER_DEFAULTBROWSER)" key="Software\Policies\Mozilla\Firefox\Locked\" valueName="browser.shell.checkDefaultBrowser">
+			<parentCategory ref="MOZILLA_FIREFOX_LOCKED" />
+			<supportedOn ref="windows:SUPPORTED_WINXPSP2" />
+			<enabledValue>
+				<string>true</string>
+			</enabledValue>
+			<disabledValue>
+				<string>false</string>
+			</disabledValue>
+		</policy>		
+		<policy name="MOZILLA_FIREFOX_LOCKED_BROWSER_DOWNLOADDIR" class="Machine" displayName="$(string.MOZILLA_FIREFOX_LOCKED_BROWSER_DOWNLOADDIR)" presentation="$(presentation.MOZILLA_FIREFOX_LOCKED_BROWSER_DOWNLOADDIR_TEXT)" key="Software\Policies\Mozilla\Firefox\Locked\" valueName="_browser.download.dir">
+			<parentCategory ref="MOZILLA_FIREFOX_LOCKED" />
+			<supportedOn ref="windows:SUPPORTED_WINXPSP2" />
+			<elements>
+				<text id="MOZILLA_FIREFOX_LOCKED_BROWSER_DOWNLOADDIR_TEXT" key="Software\Policies\Mozilla\Firefox\Locked\" valueName="browser.download.dir" />
+			</elements>
+		</policy>		
+		<policy name="MOZILLA_FIREFOX_LOCKED_BROWSER_DOWNLOADFOLDERLIST" class="Machine" displayName="$(string.MOZILLA_FIREFOX_LOCKED_BROWSER_DOWNLOADFOLDERLIST)" presentation="$(presentation.MOZILLA_FIREFOX_LOCKED_BROWSER_DOWNLOADFOLDERLIST_TEXT)" key="Software\Policies\Mozilla\Firefox\Locked\" valueName="_browser.download.folderList">
+			<parentCategory ref="MOZILLA_FIREFOX_LOCKED" />
+			<supportedOn ref="windows:SUPPORTED_WINXPSP2" />
+			<elements>
+				<text id="MOZILLA_FIREFOX_LOCKED_BROWSER_DOWNLOADFOLDERLIST_TEXT" key="Software\Policies\Mozilla\Firefox\Locked\" valueName="browser.download.folderList" />
+			</elements>
+		</policy>		
+		<policy name="MOZILLA_FIREFOX_LOCKED_BROWSER_DOWNLOADUSEDIR" class="Machine" displayName="$(string.MOZILLA_FIREFOX_LOCKED_BROWSER_DOWNLOADUSEDIR)" key="Software\Policies\Mozilla\Firefox\Locked\" valueName="browser.download.useDownloadDir">
+			<parentCategory ref="MOZILLA_FIREFOX_LOCKED" />
+			<supportedOn ref="windows:SUPPORTED_WINXPSP2" />
+			<enabledValue>
+				<string>true</string>
+			</enabledValue>
+			<disabledValue>
+				<string>false</string>
+			</disabledValue>
+		</policy>		
+		<policy name="MOZILLA_FIREFOX_LOCKED_BROWSER_SEARCHUPDATE" class="Machine" displayName="$(string.MOZILLA_FIREFOX_LOCKED_BROWSER_SEARCHUPDATE)" key="Software\Policies\Mozilla\Firefox\Locked\" valueName="browser.search.update">
+			<parentCategory ref="MOZILLA_FIREFOX_LOCKED" />
+			<supportedOn ref="windows:SUPPORTED_WINXPSP2" />
+			<enabledValue>
+				<string>true</string>
+			</enabledValue>
+			<disabledValue>
+				<string>false</string>
+			</disabledValue>
+		</policy>		
+		<policy name="MOZILLA_FIREFOX_LOCKED_BROWSER_HOMEPAGE" class="Machine" displayName="$(string.MOZILLA_FIREFOX_LOCKED_BROWSER_HOMEPAGE)" presentation="$(presentation.MOZILLA_FIREFOX_LOCKED_BROWSER_HOMEPAGE_TEXT)" key="Software\Policies\Mozilla\Firefox\Locked\" valueName="_browser.startup.homepage">
+			<parentCategory ref="MOZILLA_FIREFOX_LOCKED" />
+			<supportedOn ref="windows:SUPPORTED_WINXPSP2" />
+			<elements>
+				<text id="MOZILLA_FIREFOX_LOCKED_BROWSER_HOMEPAGE_TEXT" key="Software\Policies\Mozilla\Firefox\Locked\" valueName="browser.startup.homepage" />
+			</elements>
+		</policy>		
+		<policy name="MOZILLA_FIREFOX_LOCKED_EXTENSIONS_UPDATEENABLED" class="Machine" displayName="$(string.MOZILLA_FIREFOX_LOCKED_EXTENSIONS_UPDATEENABLED)" key="Software\Policies\Mozilla\Firefox\Locked\" valueName="extensions.update.enabled">
+			<parentCategory ref="MOZILLA_FIREFOX_LOCKED" />
+			<supportedOn ref="windows:SUPPORTED_WINXPSP2" />
+			<enabledValue>
+				<string>true</string>
+			</enabledValue>
+			<disabledValue>
+				<string>false</string>
+			</disabledValue>
+		</policy>		
+		<policy name="MOZILLA_FIREFOX_LOCKED_NETOWRK_COOKIEPERFSMIGRATED" class="Machine" displayName="$(string.MOZILLA_FIREFOX_LOCKED_NETOWRK_COOKIEPERFSMIGRATED)" key="Software\Policies\Mozilla\Firefox\Locked\" valueName="network.cookie.prefsMigrated">
+			<parentCategory ref="MOZILLA_FIREFOX_LOCKED" />
+			<supportedOn ref="windows:SUPPORTED_WINXPSP2" />
+			<enabledValue>
+				<string>true</string>
+			</enabledValue>
+			<disabledValue>
+				<string>false</string>
+			</disabledValue>
+		</policy>		
+		<policy name="MOZILLA_FIREFOX_LOCKED_NETOWRK_PROXYMANUAL" class="Machine" displayName="$(string.MOZILLA_FIREFOX_LOCKED_NETOWRK_PROXYMANUAL)" presentation="$(presentation.MOZILLA_FIREFOX_LOCKED_NETOWRK_PROXYMANUAL_TEXT)" key="Software\Policies\Mozilla\Firefox\Locked\" valueName="_network.proxy.manual">
+			<parentCategory ref="MOZILLA_FIREFOX_LOCKED" />
+			<supportedOn ref="windows:SUPPORTED_WINXPSP2" />
+			<elements>
+				<text id="MOZILLA_FIREFOX_LOCKED_NETOWRK_PROXYMANUAL_HTTP_TEXT" key="Software\Policies\Mozilla\Firefox\Locked\" valueName="network.proxy.http" />
+				<text id="MOZILLA_FIREFOX_LOCKED_NETOWRK_PROXYMANUAL_HTTP_PORT_TEXT" key="Software\Policies\Mozilla\Firefox\Locked\" valueName="network.proxy.http_port" />
+				<text id="MOZILLA_FIREFOX_LOCKED_NETOWRK_PROXYMANUAL_SSL_TEXT" key="Software\Policies\Mozilla\Firefox\Locked\" valueName="network.proxy.ssl" />
+				<text id="MOZILLA_FIREFOX_LOCKED_NETOWRK_PROXYMANUAL_SSL_PORT_TEXT" key="Software\Policies\Mozilla\Firefox\Locked\" valueName="network.proxy.ssl_port" />
+				<text id="MOZILLA_FIREFOX_LOCKED_NETOWRK_PROXYMANUAL_FTP_TEXT" key="Software\Policies\Mozilla\Firefox\Locked\" valueName="network.proxy.ftp" />
+				<text id="MOZILLA_FIREFOX_LOCKED_NETOWRK_PROXYMANUAL_FTP_PORT_TEXT" key="Software\Policies\Mozilla\Firefox\Locked\" valueName="network.proxy.ftp_port" />
+			</elements>
+		</policy>		
+
+		<policy name="MOZILLA_FIREFOX_LOCKED_NETOWRK_PROXYAUTOURL" class="Machine" displayName="$(string.MOZILLA_FIREFOX_LOCKED_NETOWRK_PROXYAUTOURL)" presentation="$(presentation.MOZILLA_FIREFOX_LOCKED_NETOWRK_PROXYAUTOURL_TEXT)" key="Software\Policies\Mozilla\Firefox\Locked\" valueName="_network.proxy.autoconfig_url">
+			<parentCategory ref="MOZILLA_FIREFOX_LOCKED" />
+			<supportedOn ref="windows:SUPPORTED_WINXPSP2" />
+			<elements>
+				<text id="MOZILLA_FIREFOX_LOCKED_NETOWRK_PROXYAUTOURL_TEXT" key="Software\Policies\Mozilla\Firefox\Locked\" valueName="network.proxy.autoconfig_url" />
+			</elements>
+		</policy>		
+		<policy name="MOZILLA_FIREFOX_LOCKED_NETOWRK_PROXYSHARESETTING" class="Machine" displayName="$(string.MOZILLA_FIREFOX_LOCKED_NETOWRK_PROXYSHARESETTING)" key="Software\Policies\Mozilla\Firefox\Locked\" valueName="network.proxy.share_proxy_settings">
+			<parentCategory ref="MOZILLA_FIREFOX_LOCKED" />
+			<supportedOn ref="windows:SUPPORTED_WINXPSP2" />
+			<enabledValue>
+				<string>true</string>
+			</enabledValue>
+			<disabledValue>
+				<string>false</string>
+			</disabledValue>
+		</policy>		
+		<policy name="MOZILLA_FIREFOX_LOCKED_NETOWRK_PROXYTYPE" class="Machine" displayName="$(string.MOZILLA_FIREFOX_LOCKED_NETOWRK_PROXYTYPE)" presentation="$(presentation.MOZILLA_FIREFOX_LOCKED_NETOWRK_PROXYTYPE_TEXT)" key="Software\Policies\Mozilla\Firefox\Locked\" valueName="_network.proxy.type">
+			<parentCategory ref="MOZILLA_FIREFOX_LOCKED" />
+			<supportedOn ref="windows:SUPPORTED_WINXPSP2" />
+			<elements>
+				<text id="MOZILLA_FIREFOX_LOCKED_NETOWRK_PROXYTYPE_TEXT" key="Software\Policies\Mozilla\Firefox\Locked\" valueName="network.proxy.type" />
+			</elements>
+		</policy>		
+		<policy name="MOZILLA_FIREFOX_LOCKED_NETWORK_PROXYVER" class="Machine" displayName="$(string.MOZILLA_FIREFOX_LOCKED_NETWORK_PROXYVER)" presentation="$(presentation.MOZILLA_FIREFOX_LOCKED_NETWORK_PROXYVER_TEXT)" key="Software\Policies\Mozilla\Firefox\Locked\" valueName="_network.http.proxy.version">
+			<parentCategory ref="MOZILLA_FIREFOX_LOCKED" />
+			<supportedOn ref="windows:SUPPORTED_WINXPSP2" />
+			<elements>
+				<text id="MOZILLA_FIREFOX_LOCKED_NETWORK_PROXYVER_TEXT" key="Software\Policies\Mozilla\Firefox\Locked\" valueName="network.http.proxy.version" />
+			</elements>
+		</policy>
+		<policy name="MOZILLA_FIREFOX_LOCKED_NETWORK_NEGOTIATETRUSTURIS" class="Machine" displayName="$(string.MOZILLA_FIREFOX_LOCKED_NETWORK_NEGOTIATETRUSTURIS)" presentation="$(presentation.MOZILLA_FIREFOX_LOCKED_NETWORK_NEGOTIATETRUSTURIS_TEXT)" key="Software\Policies\Mozilla\Firefox\Locked\" valueName="_network.negotiate-auth.trusted-uris">
+			<parentCategory ref="MOZILLA_FIREFOX_LOCKED" />
+			<supportedOn ref="windows:SUPPORTED_WINXPSP2" />
+			<elements>
+				<text id="MOZILLA_FIREFOX_LOCKED_NETWORK_NEGOTIATETRUSTURIS_TEXT" key="Software\Policies\Mozilla\Firefox\Locked\" valueName="network.negotiate-auth.trusted-uris" />
+			</elements>
+		</policy>		
+		<policy name="MOZILLA_FIREFOX_LOCKED_NETWORK_NEGOTIATEDELEGATIONURIS" class="Machine" displayName="$(string.MOZILLA_FIREFOX_LOCKED_NETWORK_NEGOTIATEDELEGATIONURIS)" presentation="$(presentation.MOZILLA_FIREFOX_LOCKED_NETWORK_NEGOTIATEDELEGATIONURIS_TEXT)" key="Software\Policies\Mozilla\Firefox\Locked\" valueName="_network.negotiate-auth.delegation-uris">
+			<parentCategory ref="MOZILLA_FIREFOX_LOCKED" />
+			<supportedOn ref="windows:SUPPORTED_WINXPSP2" />
+			<elements>
+				<text id="MOZILLA_FIREFOX_LOCKED_NETWORK_NEGOTIATEDELEGATIONURIS_TEXT" key="Software\Policies\Mozilla\Firefox\Locked\" valueName="network.negotiate-auth.delegation-uris" />
+			</elements>
+		</policy>		
+		<policy name="MOZILLA_FIREFOX_LOCKED_NETWORK_NTLMTRUSTURIS" class="Machine" displayName="$(string.MOZILLA_FIREFOX_LOCKED_NETWORK_NTLMTRUSTURIS)" presentation="$(presentation.MOZILLA_FIREFOX_LOCKED_NETWORK_NTLMTRUSTURIS_TEXT)" key="Software\Policies\Mozilla\Firefox\Locked\" valueName="_network.automatic-ntlm-auth.trusted-uris">
+			<parentCategory ref="MOZILLA_FIREFOX_LOCKED" />
+			<supportedOn ref="windows:SUPPORTED_WINXPSP2" />
+			<elements>
+				<text id="MOZILLA_FIREFOX_LOCKED_NETWORK_NTLMTRUSTURIS_TEXT" key="Software\Policies\Mozilla\Firefox\Locked\" valueName="network.automatic-ntlm-auth.trusted-uris" />
+			</elements>
+		</policy>		
+	</policies>
+</policyDefinitions>
